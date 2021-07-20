@@ -1,5 +1,7 @@
 import React from 'react';
-
+import {
+  Link
+} from "react-router-dom";
 
 
 function TopMenu() {
@@ -14,13 +16,13 @@ function TopMenu() {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="/Home">Home</a>
+        <Link to="/">Home</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="/Cart">Cart</a>
+        <Link to="/Cart">About</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="User">User</a>
+        <Link to="/users">Users</Link>
         </li>
         
       </ul>

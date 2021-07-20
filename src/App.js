@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,6 +7,7 @@ import {
   
 } from "react-router-dom";
 import Home from "./components/Home";
+import { selectTodoList } from "./features/Todoslice";
 
 import TopMenu from "./Menu/TopMenu";
 import Cart from "./ToCart/Cart";
@@ -14,35 +16,39 @@ function Users() {
 }
 
 export default function App() {
-const [postList,setPostList] =useState([]);
+const [postList, setPostList] =useState([]);
 useEffect(()=>{
   
     async function fetchPostList(){
       try {
       const requestUrl = 'http://localhost:3004/data';
       const reponse = await fetch(requestUrl);
-      const reponseJspon= await reponse.json();
-      console.log({reponseJspon});
+      const reponseJSON= await reponse.json();
+      console.log({reponseJSON});
       
-      const {data}= reponseJspon;
-      setPostList(data);
+      
+      setPostList(reponseJSON);
   } catch (error) {
-    console.log(error.message);
+    console.log('Failed:',error.message);
   }
   
    }
    fetchPostList();
-},[])
+},[]);
+const todoList= useSelector(selectTodoList);
+console.log({todoList});
   return (
     <Router>
       <div>
         <TopMenu/>
         <Switch>
           <Route path="/Cart">
-            <Cart />
+            <Cart buyLists={todoList}/>
           </Route>
           <Route path="/users">
-            <Users />
+            <Users 
+            
+            />
           </Route>
           <Route path="/">
             <Home posts={postList} />
