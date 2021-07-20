@@ -19,7 +19,7 @@ function TopMenu() {
         <Link to="/">Home</Link>
         </li>
         <li className="nav-item">
-        <Link to="/Cart">About</Link>
+        <Link to="/Cart">Cart</Link>
         </li>
         <li className="nav-item">
         <Link to="/users">Users</Link>

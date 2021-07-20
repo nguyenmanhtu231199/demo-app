@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {
     Card, CardImg, CardText, CardBody,
-    CardTitle, Button, Col, Container, Row
+    CardTitle, Button,CardSubtitle, Col, Container, Row
   } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { savetodo } from '../features/Todoslice';
@@ -35,7 +35,7 @@ function Home(props) {
                 <CardImg top width="100%" src={post.imageUrl} alt="Card image cap" />
                 <CardBody>
                   <CardTitle tag="h5">{post.name}</CardTitle>
-                  
+                  <CardSubtitle tag="h6" className="mb-2 text-muted">Giá: {post.price} VND</CardSubtitle>
                   <CardText>{post.description}</CardText>
                   <Button onClick={()=>addToCart(post)}>Add</Button>
                 </CardBody>

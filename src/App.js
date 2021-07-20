@@ -37,13 +37,16 @@ useEffect(()=>{
 },[]);
 const todoList= useSelector(selectTodoList);
 console.log({todoList});
+
+const inPutPrice= useSelector(selectTodoList);
+
   return (
     <Router>
       <div>
         <TopMenu/>
         <Switch>
           <Route path="/Cart">
-            <Cart buyLists={todoList}/>
+            <Cart buyLists={todoList} totalMoney={inPutPrice}/>
           </Route>
           <Route path="/users">
             <Users 
