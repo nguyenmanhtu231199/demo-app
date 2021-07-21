@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect} from 'react';
 import {PropTypes} from 'prop-types';
 import {
     Card, CardImg, CardText, CardBody,
@@ -25,10 +25,13 @@ function Cart (props) {
     };
     console.log(deleteToCart);
     const [cartTotal,setCartTotal]=useState(0);
-    const priceCartTotal= (buyLists)=>{
-      return buyLists.map(x=>x.price).reduce((a,b)=>a+b);
-    }
-    setCartTotal(priceCartTotal);
+    useEffect(() => {
+      const priceCartTotal= (buyLists)=>{
+        return buyLists.map(x => Number.parseInt(x.price)).reduce((a,b)=>a+b,0);
+      }
+      setCartTotal(priceCartTotal(buyLists));
+    }, [buyLists]);
+    
     return (
         <div className="todoItem">
             
@@ -36,7 +39,7 @@ function Cart (props) {
                 <h1> Gio Hang</h1>
                 <div className="todoItem__price">
                   <div className="todoItem__price__total">
-                        <p>Tổng tiền là:{cartTotal}</p>
+                        <p>Tổng tiền là:{cartTotal} VND</p>
                   </div>
 
                 </div>

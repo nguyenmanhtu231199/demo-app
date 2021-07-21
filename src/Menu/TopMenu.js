@@ -2,9 +2,14 @@ import React from 'react';
 import {
   Link
 } from "react-router-dom";
+import InputSearch from '../components/InputSearch';
 
+import {selectTodoList} from "../features/Todoslice";
 
 function TopMenu() {
+function handleSearchTerm(newFilters){
+console.log(newFilters);
+}
   return (
     <div className="App">
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
@@ -19,17 +24,17 @@ function TopMenu() {
         <Link to="/">Home</Link>
         </li>
         <li className="nav-item">
-        <Link to="/Cart">Cart</Link>
+         
+            <Link to="/Cart">Cart ({selectTodoList.length})</Link>
+         
+        
         </li>
         <li className="nav-item">
         <Link to="/users">Users</Link>
         </li>
         
       </ul>
-      <form className="d-flex">
-        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button className="btn btn-outline-success" type="submit">Search</button>
-      </form>
+      <InputSearch onSubmit={handleSearchTerm}/>
     </div>
   </div>
 </nav>
