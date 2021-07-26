@@ -21,7 +21,7 @@ useEffect(()=>{
   
     async function fetchPostList(){
       try {
-      const requestUrl = 'http://localhost:3004/data';
+      const requestUrl = 'https://my-json-server.typicode.com/nguyenmanhtu231199/data-demo-app/data';
       const reponse = await fetch(requestUrl);
       const reponseJSON= await reponse.json();
       console.log({reponseJSON});
