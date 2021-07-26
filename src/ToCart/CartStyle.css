@@ -1,0 +1,10 @@
+.todoItem{
+background-image: url('https://lh3.googleusercontent.com/proxy/4TT8VxCZRdnvtg3RCIWZ30RIWYqVcBi2BoZwmA5TvAcHQyl1I5eaWSOr7G6IfU1zzeLwg3137EPOSAr6Sph3PQJ_QF378tU4HOCdBrw8YpBy7JHnYJjTxLgg_9mgh4KtVow');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;
+}
+.todoItem__price__total {
+color: red;
+border-radius: 2px solid black;
+}

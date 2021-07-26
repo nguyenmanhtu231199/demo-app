@@ -3,7 +3,7 @@ import {
   Link
 } from "react-router-dom";
 import InputSearch from '../components/InputSearch';
-
+import './style.css';
 import {selectTodoList} from "../features/Todoslice";
 
 function TopMenu() {
@@ -14,7 +14,7 @@ console.log(newFilters);
     <div className="App">
      <nav className="navbar navbar-expand-lg navbar-light bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#">Manh Tu</a>
+    <a className="navbar-brand" href="#" title="ManhTu là chuỗi nhà thuốc bán lẻ hàng đầu thế giới">Manh Tu</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>

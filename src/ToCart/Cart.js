@@ -6,6 +6,7 @@ import {
   } from 'reactstrap';
 import { useDispatch } from 'react-redux';
 import { deleteItem } from '../features/Todoslice';
+import './CartStyle.css';
 
   Cart.propTypes = {
     buyLists: PropTypes.array,
@@ -36,9 +37,10 @@ function Cart (props) {
         <div className="todoItem">
             
             <Container>
-                <h1> Gio Hang</h1>
+                
                 <div className="todoItem__price">
                   <div className="todoItem__price__total">
+                        <h3>Giỏ Hàng</h3> 
                         <p>Tổng tiền là:{cartTotal} VND</p>
                   </div>
 
@@ -58,6 +60,17 @@ function Cart (props) {
               </Col>
             ))}
             </Row>
+            <div className="infor-pay">
+            <form className="d-flex">
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  
+        placeholder="Địa Chỉ "
+        />
+        <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"  
+        placeholder="Số Điện Thoại "
+        />
+        <button className="btn btn-outline-success" type="submit">Đặt Hàng</button>
+      </form>
+            </div>
             </Container>
         </div>
     )

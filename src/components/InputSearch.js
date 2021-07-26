@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-
+import './InputStyle.css';
 InputSearch.propTypes = {
       onSubmit: PropTypes.func,
 };
@@ -30,7 +30,7 @@ function InputSearch(props) {
         <div>
             <form className="d-flex">
         <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={searchTerm}
-        onChange={hanldSearchChange}
+        onChange={hanldSearchChange} placeholder="Bạn muốn tìm kiếm gì "
         />
         <button className="btn btn-outline-success" type="submit">Search</button>
       </form>

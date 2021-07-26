@@ -1,0 +1,16 @@
+span.discounts{
+    padding: 3px 5px 3px 5px;
+    color: white;
+    background-color: orange;
+    border-radius: 3px;
+    font-size: 12px;
+    left: 10px;
+    position: absolute;
+    z-index: 99;
+}
+.list{
+    background-image: url('https://img2.thuthuatphanmem.vn/uploads/2018/12/30/background-thiet-ke-dep-va-don-gian_110344029.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
