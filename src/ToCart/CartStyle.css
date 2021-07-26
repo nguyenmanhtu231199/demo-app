@@ -1,10 +1,10 @@
 .todoItem{
-background-image: url('https://lh3.googleusercontent.com/proxy/4TT8VxCZRdnvtg3RCIWZ30RIWYqVcBi2BoZwmA5TvAcHQyl1I5eaWSOr7G6IfU1zzeLwg3137EPOSAr6Sph3PQJ_QF378tU4HOCdBrw8YpBy7JHnYJjTxLgg_9mgh4KtVow');
+background-image: url('https://i.pinimg.com/originals/cb/c2/2c/cbc22ca5a3d7568a742262639a9f6b3f.jpg');
 background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;
 }
 .todoItem__price__total {
-color: red;
+color: orangered;
 border-radius: 2px solid black;
 }

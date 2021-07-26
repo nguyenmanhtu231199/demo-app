@@ -40,7 +40,7 @@ function Cart (props) {
                 
                 <div className="todoItem__price">
                   <div className="todoItem__price__total">
-                        <h3>Giỏ Hàng</h3> 
+                        <h2>Giỏ Hàng</h2> 
                         <p>Tổng tiền là:{cartTotal} VND</p>
                   </div>
 
