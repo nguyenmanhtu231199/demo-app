@@ -7,13 +7,13 @@ import {
   
 } from "react-router-dom";
 import Home from "./components/Home";
+import Users from "./components/Users";
 import { selectTodoList } from "./features/Todoslice";
 
 import TopMenu from "./Menu/TopMenu";
 import Cart from "./ToCart/Cart";
-function Users() {
-  return <h2>Users</h2>;
-}
+
+
 
 export default function App() {
 const [postList, setPostList] =useState([]);
@@ -49,9 +49,7 @@ console.log({todoList});
             <Cart buyLists={todoList} />
           </Route>
           <Route path="/users">
-            <Users 
-            
-            />
+            <Users />
           </Route>
           <Route path="/">
             <Home posts={postList} />
