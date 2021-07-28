@@ -48,8 +48,8 @@ console.log({todoList});
           <Route path="/Cart">
             <Cart buyLists={todoList} />
           </Route>
-          <Route path="/users">
-            <Users />
+          <Route path="/User">
+            <Users/>
           </Route>
           <Route path="/">
             <Home posts={postList} />

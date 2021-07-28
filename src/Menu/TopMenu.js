@@ -14,7 +14,7 @@ console.log(newFilters);
     <div className="App">
      <nav className="navbar navbar-expand-lg navbar-light fixed-top bg-light">
   <div className="container-fluid">
-    <a className="navbar-brand" href="#" title="ManhTu là chuỗi nhà thuốc bán lẻ hàng đầu thế giới">Manh Tu</a>
+    <a className="navbar-brand" href="/" title="ManhTu là chuỗi nhà thuốc bán lẻ hàng đầu thế giới">Manh Tu</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
     </button>
@@ -24,13 +24,10 @@ console.log(newFilters);
         <Link to="/">Home</Link>
         </li>
         <li className="nav-item">
-         
-            <Link to="/Cart">Cart ({selectTodoList.length})</Link>
-         
-        
+       <Link to="/Cart">Cart </Link>
         </li>
         <li className="nav-item">
-        <Link to="/users">Users</Link>
+        <Link to="/User">Users</Link>
         </li>
         
       </ul>
